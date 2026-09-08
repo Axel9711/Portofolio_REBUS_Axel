@@ -78,6 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 3. Gestionnaire des boutons de compétences (Croix X vers Diaporama PDF)
   setupCompetenceButtons();
+
+  // 4. Gestionnaire de prévisualisation et téléchargement du PDF officiel E6
+  setupPdfModalAndDownloads();
 });
 
 function showCyberToast(title, message) {
@@ -138,4 +141,80 @@ function setupCompetenceButtons() {
     });
   });
 }
+
+function downloadFileSafely(url, filename) {
+  showCyberToast("TÉLÉCHARGEMENT EN COURS", `Préparation de <code>${filename}</code>...`);
+  fetch(url)
+    .then(resp => {
+      if (!resp.ok) throw new Error("Fichier introuvable");
+      return resp.blob();
+    })
+    .then(blob => {
+      const blobUrl = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.style.display = "none";
+      a.href = blobUrl;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+      showCyberToast("TÉLÉCHARGEMENT RÉUSSI", `Le fichier <code>${filename}</code> a été téléchargé sur votre appareil.`);
+    })
+    .catch(err => {
+      // En cas de restriction particulière, repli direct
+      window.location.href = url;
+    });
+}
+
+function setupPdfModalAndDownloads() {
+  const openModalBtns = document.querySelectorAll(".btn-open-preview-modal");
+  const modal = document.getElementById("pdf-preview-modal");
+  const closeModalBtns = document.querySelectorAll(".modal-close-btn, .btn-close-modal");
+  const downloadBtns = document.querySelectorAll(".btn-safe-download");
+
+  if (modal) {
+    openModalBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    const closeModal = () => {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    };
+
+    closeModalBtns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        closeModal();
+      });
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("active")) {
+        closeModal();
+      }
+    });
+  }
+
+  downloadBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const url = btn.getAttribute("data-download-url") || btn.getAttribute("href") || "tableau-synthese-axel-rebus.pdf";
+      const filename = btn.getAttribute("data-download-name") || "tableau-synthese-axel-rebus.pdf";
+      downloadFileSafely(url, filename);
+    });
+  });
+}
+
 

@@ -42,10 +42,13 @@
                 <span>Candidat : <strong>REBUS Axel</strong></span>
             </div>
             <div class="cartouche-item">
-                <span>Établissement : <strong>Institution des Chartreux (Lyon)</strong></span>
+                <span>Établissement : <strong>Institution des Chartreux</strong></span>
             </div>
             <div class="cartouche-item">
                 <span>Option : <strong>[X] SISR</strong></span>
+            </div>
+            <div class="cartouche-item" style="width: 100%; border-top: 1px dashed var(--border-color); padding-top: 0.5rem; margin-top: 0.2rem;">
+                <span>Adresse URL du portfolio : <a href="https://axel9711.github.io/Portofolio_REBUS_Axel" target="_blank" style="color: var(--accent-cyan); text-decoration: underline;">https://axel9711.github.io/Portofolio_REBUS_Axel</a></span>
             </div>
         </div>
 
@@ -132,7 +135,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="realisation-text">Préparation / configuration de téléphones fixes Fanvil (VoIP)</span>
+                            <span class="realisation-text">Préparation/configuration de téléphones fix Fanvil</span>
                         </td>
                         <td class="cross-cell"></td>
                         <td class="cross-cell"></td>
@@ -141,7 +144,7 @@
                             <button type="button" 
                                     class="cross-btn" 
                                     data-competence="Travailler en mode projet" 
-                                    data-realisation="Préparation / configuration de téléphones fixes Fanvil"
+                                    data-realisation="Préparation/configuration de téléphones fix Fanvil"
                                     title="Consulter le diaporama justificatif de cette compétence">
                                 X
                             </button>
@@ -171,69 +174,50 @@
             </table>
         </div>
 
-        <!-- Bouton Téléchargement / Voir la grille E6 -->
-        <div style="text-align: center; margin: 2rem 0 3.5rem 0;">
-            <a href="tableau-synthese-axel-rebus.pdf" download="tableau-synthese-axel-rebus.pdf" target="_blank" class="btn-cyber" style="font-size: 1rem; padding: 0.9rem 2rem;">
-                📄 Voir la grille E6 (Télécharger le PDF)
-            </a>
+        <!-- Actions Grille E6 : Aperçu direct & Téléchargement sécurisé -->
+        <div style="text-align: center; margin: 2.2rem 0 0.8rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+            <button type="button" class="btn-cyber btn-open-preview-modal" style="font-size: 0.95rem; padding: 0.85rem 1.8rem;">
+                👁️ Consulter la grille officielle (Aperçu direct)
+            </button>
+            <button type="button" class="btn-cyber btn-safe-download" data-download-url="tableau-synthese-axel-rebus.pdf" data-download-name="tableau-synthese-axel-rebus.pdf" style="font-size: 0.95rem; padding: 0.85rem 1.8rem; background: rgba(0, 243, 255, 0.15);">
+                📥 Télécharger le PDF (tableau-synthese-axel-rebus.pdf)
+            </button>
         </div>
-
-        <!-- Section Compétences Techniques & Stack -->
-        <h2 class="section-title">> Stack Technique & Savoir-Faire <span class="cursor"></span></h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Systèmes & Virtualisation</h3>
-                <p>Administration et gestion de parcs informatiques, environnements virtualisés et conteneurisation.</p>
-                <div class="tags">
-                    <span class="tag">Linux (Debian/Ubuntu)</span>
-                    <span class="tag">Windows Server</span>
-                    <span class="tag">Active Directory</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">VMware / Proxmox</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>Réseaux & Protocoles</h3>
-                <p>Conception, adressage et configuration d'architectures réseaux LAN/WAN commutées et routées.</p>
-                <div class="tags">
-                    <span class="tag">Cisco IOS</span>
-                    <span class="tag">VLAN & 802.1Q</span>
-                    <span class="tag">OSPF / RIP</span>
-                    <span class="tag">VPN (IPsec/OpenVPN)</span>
-                    <span class="tag">FLSM / VLSM</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>Cybersécurité & Supervision</h3>
-                <p>Protection périmétrique, analyse de trames, filtrage réseau et stratégie de sécurisation des accès.</p>
-                <div class="tags">
-                    <span class="tag">Pare-feu (Fortinet/pfSense)</span>
-                    <span class="tag">Wireshark</span>
-                    <span class="tag">Nmap</span>
-                    <span class="tag">Gestion des droits</span>
-                    <span class="tag">Sauvegardes 3-2-1</span>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>Scripting & Développement</h3>
-                <p>Automatisation de tâches d'administration système et intégration web responsive.</p>
-                <div class="tags">
-                    <span class="tag">Bash</span>
-                    <span class="tag">PowerShell</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">HTML / CSS</span>
-                    <span class="tag">JavaScript</span>
-                </div>
-            </div>
-        </div>
+        <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2rem;">
+            Document officiel conforme BTS SIO 2026 : <code>tableau-synthese-axel-rebus.pdf</code> (Institution des Chartreux).
+        </p>
     </main>
 
     <footer>
         <p>&copy; 2026 Axel REBUS — BTS SIO SISR</p>
     </footer>
+
+    <!-- Modale de prévisualisation officielle du document E6 -->
+    <div id="pdf-preview-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">> TABLEAU DE SYNTHÈSE OFFICIEL // BTS SIO 2026</h3>
+                <button type="button" class="modal-close-btn" aria-label="Fermer la prévisualisation">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="tableau-synthese-preview.png" alt="Tableau de synthèse officiel des réalisations professionnelles - Axel REBUS" style="width: 100%; height: auto; display: block;">
+            </div>
+            <div class="modal-footer">
+                <span style="font-size: 0.82rem; color: var(--text-muted);">
+                    Candidat : <strong>REBUS Axel</strong> | Établissement : <strong>Institution des Chartreux</strong>
+                </span>
+                <div style="display: flex; gap: 0.8rem;">
+                    <button type="button" class="btn-cyber btn-safe-download" data-download-url="tableau-synthese-axel-rebus.pdf" data-download-name="tableau-synthese-axel-rebus.pdf" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">
+                        📥 Télécharger le PDF
+                    </button>
+                    <button type="button" class="btn-cyber btn-close-modal" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; border-color: var(--text-muted); color: var(--text-muted);">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

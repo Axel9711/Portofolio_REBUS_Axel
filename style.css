@@ -742,3 +742,123 @@ footer {
   }
 }
 
+/* Modale de prévisualisation officielle de la grille E6 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 15, 30, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background: var(--bg-card);
+  border: 1px solid var(--accent-cyan);
+  box-shadow: 0 0 35px rgba(0, 243, 255, 0.25);
+  border-radius: 10px;
+  max-width: 1100px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalEnter 0.25s ease-out;
+}
+
+@keyframes modalEnter {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(0, 243, 255, 0.05);
+}
+
+.modal-header h3 {
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: var(--accent-cyan);
+}
+
+.modal-body {
+  padding: 1.2rem;
+  overflow-y: auto;
+  text-align: center;
+  background: #ffffff;
+}
+
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-card);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+[data-theme="light"] .modal-overlay {
+  background: rgba(230, 240, 255, 0.85);
+}
+[data-theme="light"] .modal-content {
+  background: #ffffff;
+  border-color: #0066ff;
+  box-shadow: 0 10px 40px rgba(0, 102, 255, 0.2);
+}
+[data-theme="light"] .modal-header {
+  background: #f0f7ff;
+  border-bottom-color: rgba(0, 102, 255, 0.15);
+}
+[data-theme="light"] .modal-header h3 {
+  color: #0066ff;
+}
+[data-theme="light"] .modal-footer {
+  background: #f8fafc;
+  border-top-color: rgba(0, 102, 255, 0.15);
+}
+
+
