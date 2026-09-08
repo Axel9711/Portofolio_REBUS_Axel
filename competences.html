@@ -73,16 +73,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="realisation-text">Création d'une entreprise ainsi qu'un site web avec une présence en ligne</span>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem;">
+                                <span class="realisation-text">Création d'une entreprise ainsi qu'un site web avec une présence en ligne</span>
+                                <button type="button" class="badge-diapo btn-trigger-diapo" data-diapo="presence" title="Consulter le dossier complet : Ferhan Food (16 pages)">
+                                    📑 Dossier PDF (16 pages)
+                                </button>
+                            </div>
                         </td>
                         <td class="cross-cell"></td>
                         <td class="cross-cell"></td>
                         <td class="cross-cell">
                             <button type="button" 
-                                    class="cross-btn" 
+                                    class="cross-btn btn-trigger-diapo" 
                                     data-competence="Développer la présence en ligne de l'organisation" 
                                     data-realisation="Création d'une entreprise ainsi qu'un site web avec une présence en ligne"
-                                    title="Consulter le diaporama justificatif de cette compétence">
+                                    data-diapo="presence"
+                                    title="Consulter le dossier justificatif : Développer la présence en ligne (Ferhan Food)">
                                 X
                             </button>
                         </td>
@@ -97,7 +103,12 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="realisation-text">Installation d'un utilisateur après un retour d'arrêt maladie</span>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem;">
+                                <span class="realisation-text">Installation d'un utilisateur après un retour d'arrêt maladie</span>
+                                <button type="button" class="badge-diapo btn-trigger-diapo" data-diapo="poste" title="Consulter le diaporama : Rapport d'installation poste utilisateur">
+                                    📑 Diapo PDF (4 slides)
+                                </button>
+                            </div>
                         </td>
                         <td class="cross-cell"></td>
                         <td class="cross-cell"></td>
@@ -105,10 +116,11 @@
                         <td class="cross-cell"></td>
                         <td class="cross-cell">
                             <button type="button" 
-                                    class="cross-btn" 
+                                    class="cross-btn btn-trigger-diapo" 
                                     data-competence="Mettre à disposition des utilisateurs un service informatique" 
                                     data-realisation="Installation d'un utilisateur après un retour d'arrêt maladie"
-                                    title="Consulter le diaporama justificatif de cette compétence">
+                                    data-diapo="poste"
+                                    title="Consulter le diaporama justificatif : Rapport d'installation poste utilisateur">
                                 X
                             </button>
                         </td>
@@ -135,17 +147,23 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="realisation-text">Préparation/configuration de téléphones fix Fanvil</span>
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.4rem;">
+                                <span class="realisation-text">Préparation/configuration de téléphones fix Fanvil</span>
+                                <button type="button" class="badge-diapo btn-trigger-diapo" data-diapo="fanvil" title="Consulter le diaporama : Déploiement des téléphones Fanvil Pro V66">
+                                    📑 Diapo PDF (5 slides)
+                                </button>
+                            </div>
                         </td>
                         <td class="cross-cell"></td>
                         <td class="cross-cell"></td>
                         <td class="cross-cell"></td>
                         <td class="cross-cell">
                             <button type="button" 
-                                    class="cross-btn" 
+                                    class="cross-btn btn-trigger-diapo" 
                                     data-competence="Travailler en mode projet" 
                                     data-realisation="Préparation/configuration de téléphones fix Fanvil"
-                                    title="Consulter le diaporama justificatif de cette compétence">
+                                    data-diapo="fanvil"
+                                    title="Consulter le diaporama justificatif : Déploiement des téléphones Fanvil Pro V66">
                                 X
                             </button>
                         </td>
@@ -211,6 +229,37 @@
                         📥 Télécharger le PDF
                     </button>
                     <button type="button" class="btn-cyber btn-close-modal" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; border-color: var(--text-muted); color: var(--text-muted);">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale interactive de visualisation du Diaporama / Présentation E6 -->
+    <div id="diaporama-preview-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="diapo-modal-title">
+        <div class="modal-content" style="max-width: 980px;">
+            <div class="modal-header">
+                <h3 id="diapo-modal-title">> DIAPORAMA E6 // VISUALISATION</h3>
+                <button type="button" class="modal-close-btn diapo-close-btn" aria-label="Fermer le diaporama">&times;</button>
+            </div>
+            <div class="modal-body" style="background: #090d16; padding: 1.2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 420px; position: relative;">
+                <img id="diapo-slide-img" src="" alt="Diapositive" style="max-width: 100%; max-height: 65vh; width: auto; height: auto; border-radius: 6px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); border: 1px solid rgba(0, 243, 255, 0.2);">
+                <div id="diapo-loading-indicator" style="display: none; position: absolute; color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.9rem;">
+                    Chargement de la slide...
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="slide-controls">
+                    <button type="button" class="slide-nav-btn" id="btn-slide-prev" title="Diapositive précédente (Flèche Gauche)">◀ Précédent</button>
+                    <span class="slide-counter" id="slide-counter">Diapo 1 / 5</span>
+                    <button type="button" class="slide-nav-btn" id="btn-slide-next" title="Diapositive suivante (Flèche Droite)">Suivant ▶</button>
+                </div>
+                <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                    <button type="button" class="btn-cyber" id="btn-download-active-diapo" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">
+                        📥 Télécharger le PDF
+                    </button>
+                    <button type="button" class="btn-cyber diapo-close-btn" style="padding: 0.5rem 1.2rem; font-size: 0.85rem; border-color: var(--text-muted); color: var(--text-muted);">
                         Fermer
                     </button>
                 </div>

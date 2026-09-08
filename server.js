@@ -29,6 +29,39 @@ app.get('/download-cv', (req, res) => {
   res.download(filePath, 'cv-axel-rebus.pdf');
 });
 
+app.get('/download-diaporama-fanvil', (req, res) => {
+  const filePath = path.join(__dirname, 'diaporama-telephones-fanvil.pdf');
+  res.download(filePath, 'diaporama-telephones-fanvil.pdf');
+});
+
+app.get('/download-diaporama-poste', (req, res) => {
+  const filePath = path.join(__dirname, 'diaporama-installation-poste.pdf');
+  res.download(filePath, 'diaporama-installation-poste.pdf');
+});
+
+app.get('/download-dossier-presence', (req, res) => {
+  const filePath = path.join(__dirname, 'dossier-presence-en-ligne.pdf');
+  res.download(filePath, 'dossier-presence-en-ligne.pdf');
+});
+
+app.get('/dossier-presence-en-ligne.pdf', (req, res) => {
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', 'inline; filename="dossier-presence-en-ligne.pdf"');
+  res.sendFile(path.join(__dirname, 'dossier-presence-en-ligne.pdf'));
+});
+
+app.get('/diaporama-telephones-fanvil.pdf', (req, res) => {
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', 'inline; filename="diaporama-telephones-fanvil.pdf"');
+  res.sendFile(path.join(__dirname, 'diaporama-telephones-fanvil.pdf'));
+});
+
+app.get('/diaporama-installation-poste.pdf', (req, res) => {
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', 'inline; filename="diaporama-installation-poste.pdf"');
+  res.sendFile(path.join(__dirname, 'diaporama-installation-poste.pdf'));
+});
+
 app.get('/tableau-synthese-axel-rebus.pdf', (req, res) => {
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader('Content-Disposition', 'inline; filename="tableau-synthese-axel-rebus.pdf"');

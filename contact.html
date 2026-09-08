@@ -27,53 +27,116 @@
   <!-- Contenu principal -->
   <main>
     <div class="terminal-header">
-      <span class="status-dot"></span> // SYSTEM_STATUS: ONLINE
+      <span class="status-dot"></span> // SYSTEM_STATUS: ONLINE &bull; CONTACT_CHANNELS: READY
     </div>
 
-    <h1 class="page-title">> Contact <span class="cursor"></span></h1>
+    <h1 class="page-title">> Contact & Coordonnées <span class="cursor"></span></h1>
 
-    <div class="contact-grid">
-      <!-- Coordonnées -->
-      <div class="card contact-card">
-        <h2>Mes coordonnées</h2>
-        <p>N'hésite pas à me contacter pour toute opportunité, échange sur mes projets ou proposition de stage/alternance.</p>
-
-        <ul class="contact-details">
-          <li><strong>Email :</strong> <a href="mailto:axel.rebus@exemple.fr">axel.rebus@exemple.fr</a></li>
-          <li><strong>Téléphone :</strong> <a href="tel:+33600000000">06 00 00 00 00</a></li>
-          <li><strong>Localisation :</strong> Lyon, France</li>
-          <li><strong>LinkedIn :</strong> <a href="https://linkedin.com/in/axel-rebus" target="_blank" rel="noopener">linkedin.com/in/axel-rebus</a></li>
-          <li><strong>GitHub :</strong> <a href="https://github.com/axel-rebus" target="_blank" rel="noopener">github.com/axel-rebus</a></li>
-        </ul>
+    <!-- Carte d'introduction et statut de disponibilité -->
+    <div class="card contact-hero-card">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>DISPONIBLE : Recherche d'alternance & stage en Réseaux / Cybersécurité</span>
       </div>
+      <p style="margin-top: 1rem; line-height: 1.6; color: var(--text-main);">
+        N'hésitez pas à me contacter pour toute opportunité professionnelle, proposition d'alternance ou de stage en administration systèmes et réseaux, ou pour échanger sur mes réalisations en BTS SIO SISR.
+      </p>
+    </div>
 
-      <!-- Formulaire -->
+    <!-- Grille des coordonnées directes -->
+    <div class="contact-grid-coordonnees">
+      
+      <!-- Carte 1 : Canaux Directs -->
       <div class="card">
-        <h2>Envoyer un message</h2>
-        <form class="contact-form" action="#" method="POST">
-          <div class="form-group">
-            <label for="name">Nom / Entreprise</label>
-            <input type="text" id="name" name="name" placeholder="Ex : Jean Dupont" required>
+        <h2>Canaux Directs</h2>
+        <p style="margin-bottom: 1.25rem;">Joignable rapidement par courrier électronique ou par téléphone.</p>
+
+        <div class="contact-channel-list">
+          <div class="contact-channel-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-info">
+              <span class="channel-label">ADRESSE EMAIL</span>
+              <a href="mailto:axel.rebus@exemple.fr" class="channel-value" id="contact-email-link">axel.rebus@gmail.com</a>
+            </div>
+            <button type="button" class="btn-copy-email" id="btn-copy-email" title="Copier l'adresse email" aria-label="Copier l'adresse email">
+              Copier
+            </button>
           </div>
 
-          <div class="form-group">
-            <label for="email">Adresse Email</label>
-            <input type="email" id="email" name="email" placeholder="nom@exemple.fr" required>
+          <div class="contact-channel-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-info">
+              <span class="channel-label">TÉLÉPHONE MOBILE</span>
+              <a href="tel:+33600000000" class="channel-value">06 07 64 40 56</a>
+            </div>
+            <a href="tel:+33600000000" class="btn-copy-email" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+              Appeler
+            </a>
           </div>
 
-          <div class="form-group">
-            <label for="subject">Sujet</label>
-            <input type="text" id="subject" name="subject" placeholder="Ex : Proposition de stage..." required>
+          <div class="contact-channel-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-info">
+              <span class="channel-label">LOCALISATION & MOBILITÉ</span>
+              <span class="channel-value" style="color: var(--text-main); font-weight: 500;">Lyon (69), France • Métropole </span>
+            </div>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn-cyber">Envoyer le message</button>
-        </form>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <a href="mailto:axel.rebus@gmail.com" class="btn-cyber" style="margin-top: 0; font-size: 0.9rem; padding: 0.65rem 1.3rem;">
+            ✉️ M'envoyer un e-mail
+          </a>
+        </div>
       </div>
+
+      <!-- Carte 2 : Profils Pro & Établissement -->
+      <div class="card">
+        <h2>Profils & Réseaux</h2>
+        <p style="margin-bottom: 1.25rem;">Consultez mes profils professionnels en ligne et mes dépôts de code.</p>
+
+        <div class="contact-channel-list">
+          <div class="contact-channel-item">
+            <div class="contact-icon">💼</div>
+            <div class="contact-info">
+              <span class="channel-label">RÉSEAU PROFESSIONNEL</span>
+              <span class="channel-value">LinkedIn</span>
+            </div>
+            <a href="https://www.linkedin.com/in/axel-rebus-b930b93a6/" target="_blank" rel="noopener" class="btn-copy-email" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+              Visiter ↗
+            </a>
+          </div>
+
+          <div class="contact-channel-item">
+            <div class="contact-icon">💻</div>
+            <div class="contact-info">
+              <span class="channel-label">DÉPÔTS & PROJETS CODE</span>
+              <span class="channel-value">GitHub</span>
+            </div>
+            <a href="https://github.com/Axel9711" target="_blank" rel="noopener" class="btn-copy-email" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+              Visiter ↗
+            </a>
+          </div>
+
+          <div class="contact-channel-item">
+            <div class="contact-icon">🎓</div>
+            <div class="contact-info">
+              <span class="channel-label">ÉTABLISSEMENT DE FORMATION</span>
+              <span class="channel-value" style="color: var(--text-main); font-weight: 500;">Institution des Chartreux — Lyon</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <a href="cv.html" class="btn-cyber" style="margin-top: 0; font-size: 0.9rem; padding: 0.65rem 1.3rem;">
+            📄 Consulter mon CV & Stage
+          </a>
+          <a href="competences.html" class="btn-cyber" style="margin-top: 0; font-size: 0.9rem; padding: 0.65rem 1.3rem; background: rgba(0, 243, 255, 0.15);">
+            📋 Grille E6 Compétences
+          </a>
+        </div>
+      </div>
+
     </div>
   </main>
 
