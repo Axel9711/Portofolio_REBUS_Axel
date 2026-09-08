@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV & Stage — Axel REBUS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">> AXEL.REBUS</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="cv.html" class="active">CV & Stage</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="theme-toggle" type="button" aria-label="Changer de thème"></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <div class="terminal-header">
+      <span class="status-dot"></span> // SYSTEM_STATUS: ONLINE
+    </div>
+
+    <!-- Section CV -->
+    <h1 class="page-title">> Curriculum Vitae & Expériences <span class="cursor"></span></h1>
+    
+    <div class="card" style="text-align: center; padding: 2rem; margin-top: 1.5rem;">
+      <h2>Document officiel</h2>
+      <p style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Consultez ou téléchargez mon CV au format PDF imprimable.</p>
+      <a href="cv-axel-rebus.pdf" download="cv-axel-rebus.pdf" target="_blank" class="btn-cyber">📥 Télécharger le CV (PDF)</a>
+    </div>
+
+    <!-- Section Stage BTS -->
+    <h2 class="section-title">> Focus Stage BTS SIO 1 (2026) <span class="cursor"></span></h2>
+
+    <div class="stage-box">
+      <h3 class="stage-title">Stage Systèmes & Réseaux — 1er Juin au 3 Juillet 2026</h3>
+      <p class="stage-cadre"><strong>Cadre :</strong> Stage de validation de 1ère année de BTS SIO SISR (5 semaines)</p>
+      
+      <p class="stage-subtitle"><strong>Missions principales réalisées :</strong></p>
+      <ul class="stage-missions">
+        <li><strong>Déploiement Téléphonie IP (Fanvil) :</strong> Inventaire des adresses MAC, mise à jour des firmwares et autoprovisioning à distance pour un parc de 36 postes.</li>
+        <li><strong>Masterisation & Intégration PC :</strong> Préparation de postes clients, jonction au domaine Active Directory, configuration VPN et déploiement applicatif.</li>
+        <li><strong>Configuration Serveur NAS (Synology) :</strong> Assemblage matériel, installation du système DSM, sécurisation et gestion des accès utilisateurs.</li>
+        <li><strong>Reconditionnement & Re-mastering :</strong> Sortie de flotte (Entra ID), réinitialisation BIOS et réinstallation complète de Windows 10 par clé USB.</li>
+      </ul>
+    </div>
+
+    <!-- Section Historique -->
+    <h2 class="section-title">> Historique & Formations <span class="cursor"></span></h2>
+
+    <div class="grid">
+      <!-- Formations -->
+      <div class="card">
+        <h2>Formations</h2>
+        <p style="margin-bottom: 1rem;">
+          <strong>2025 - 2027 :</strong> BTS SIO (Option SISR) — <em>Institution des Chartreux, Lyon</em>
+        </p>
+        <p>
+          <strong>2024 - 2025 :</strong> Baccalauréat Général (Maths / Physique-Chimie, Mention AB) — <em>Assomption Bellevue</em>
+        </p>
+      </div>
+
+      <!-- Stages d'observation -->
+      <div class="card">
+        <h2>Stages d'Observation Passés</h2>
+        <p style="margin-bottom: 1rem;">
+          <strong>Juin 2023 :</strong> Platinium Informatique (Hardware, réparation PC, vente de matériel)
+        </p>
+        <p>
+          <strong>Février 2022 :</strong> Net Lyon ESN (Découverte du monde du travail, installation d'OS, tri de données)
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Axel REBUS — BTS SIO SISR</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

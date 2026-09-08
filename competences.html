@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences & Tableau de Synthèse — Axel REBUS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">> AXEL.REBUS</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="presentation.html">Présentation</a></li>
+                <li><a href="competences.html" class="active">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="cv.html">CV & Stage</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle" type="button" aria-label="Changer de thème"></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="terminal-header">
+            <span class="status-dot"></span> // SYSTEM_STATUS: ONLINE
+        </div>
+
+        <h1 class="page-title">> Tableau de Synthèse des Compétences <span class="cursor"></span></h1>
+        
+        <p style="margin-top: 0.8rem; color: var(--text-muted); font-size: 0.95rem; max-width: 800px;">
+            Grille officielle d'évaluation du BTS SIO SISR (Épreuve E6 — Support et mise à disposition de services informatiques). Les croix <strong>[ X ]</strong> représentent les compétences mobilisées lors de mes projets et de mes stages.
+        </p>
+
+        <!-- Cartouche Officiel Candidat BTS -->
+        <div class="cartouche-bts">
+            <div class="cartouche-item">
+                <span>Session : <strong>2026</strong></span>
+            </div>
+            <div class="cartouche-item">
+                <span>Candidat : <strong>REBUS Axel</strong></span>
+            </div>
+            <div class="cartouche-item">
+                <span>Établissement : <strong>Institution des Chartreux (Lyon)</strong></span>
+            </div>
+            <div class="cartouche-item">
+                <span>Option : <strong>[X] SISR</strong></span>
+            </div>
+        </div>
+
+        <!-- Grand Tableau de Synthèse Responsive -->
+        <div class="competences-table-wrapper">
+            <table class="competences-table">
+                <thead>
+                    <tr>
+                        <th class="col-realisation">Réalisations professionnelles<br><small style="font-weight: 400; opacity: 0.8;">(Intitulé et productions associées)</small></th>
+                        <th class="col-competence">Gérer le patrimoine informatique</th>
+                        <th class="col-competence">Répondre aux incidents et demandes d'assistance</th>
+                        <th class="col-competence">Développer la présence en ligne de l'organisation</th>
+                        <th class="col-competence">Travailler en mode projet</th>
+                        <th class="col-competence">Mettre à disposition des utilisateurs un service informatique</th>
+                        <th class="col-competence">Organiser son développement professionnel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1. Réalisation en cours de formation -->
+                    <tr class="category-row">
+                        <td colspan="7">Réalisation en cours de formation</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="realisation-text">Création d'une entreprise ainsi qu'un site web avec une présence en ligne</span>
+                        </td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell">
+                            <button type="button" 
+                                    class="cross-btn" 
+                                    data-competence="Développer la présence en ligne de l'organisation" 
+                                    data-realisation="Création d'une entreprise ainsi qu'un site web avec une présence en ligne"
+                                    title="Consulter le diaporama justificatif de cette compétence">
+                                X
+                            </button>
+                        </td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                    </tr>
+
+                    <!-- 2. Réalisations en milieu professionnel - 1ère année -->
+                    <tr class="category-row">
+                        <td colspan="7">Réalisations en milieu professionnel en cours de première année</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="realisation-text">Installation d'un utilisateur après un retour d'arrêt maladie</span>
+                        </td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell">
+                            <button type="button" 
+                                    class="cross-btn" 
+                                    data-competence="Mettre à disposition des utilisateurs un service informatique" 
+                                    data-realisation="Installation d'un utilisateur après un retour d'arrêt maladie"
+                                    title="Consulter le diaporama justificatif de cette compétence">
+                                X
+                            </button>
+                        </td>
+                        <td class="cross-cell"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="realisation-text">Réaménagement du parc informatique de toute une entreprise</span>
+                        </td>
+                        <td class="cross-cell">
+                            <button type="button" 
+                                    class="cross-btn" 
+                                    data-competence="Gérer le patrimoine informatique" 
+                                    data-realisation="Réaménagement du parc informatique de toute une entreprise"
+                                    title="Consulter le diaporama justificatif de cette compétence">
+                                X
+                            </button>
+                        </td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="realisation-text">Préparation / configuration de téléphones fixes Fanvil (VoIP)</span>
+                        </td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell">
+                            <button type="button" 
+                                    class="cross-btn" 
+                                    data-competence="Travailler en mode projet" 
+                                    data-realisation="Préparation / configuration de téléphones fixes Fanvil"
+                                    title="Consulter le diaporama justificatif de cette compétence">
+                                X
+                            </button>
+                        </td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                    </tr>
+
+                    <!-- 3. Réalisations en milieu professionnel - 2ème année -->
+                    <tr class="category-row">
+                        <td colspan="7">Réalisations en milieu professionnel en cours de seconde année</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="realisation-text" style="font-style: italic; color: var(--text-muted);">
+                                Missions et projets en cours de planification (Session 2026-2027)
+                            </span>
+                        </td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                        <td class="cross-cell"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Bouton Téléchargement / Voir la grille E6 -->
+        <div style="text-align: center; margin: 2rem 0 3.5rem 0;">
+            <a href="tableau-synthese-axel-rebus.pdf" download="tableau-synthese-axel-rebus.pdf" target="_blank" class="btn-cyber" style="font-size: 1rem; padding: 0.9rem 2rem;">
+                📄 Voir la grille E6 (Télécharger le PDF)
+            </a>
+        </div>
+
+        <!-- Section Compétences Techniques & Stack -->
+        <h2 class="section-title">> Stack Technique & Savoir-Faire <span class="cursor"></span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Systèmes & Virtualisation</h3>
+                <p>Administration et gestion de parcs informatiques, environnements virtualisés et conteneurisation.</p>
+                <div class="tags">
+                    <span class="tag">Linux (Debian/Ubuntu)</span>
+                    <span class="tag">Windows Server</span>
+                    <span class="tag">Active Directory</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">VMware / Proxmox</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Réseaux & Protocoles</h3>
+                <p>Conception, adressage et configuration d'architectures réseaux LAN/WAN commutées et routées.</p>
+                <div class="tags">
+                    <span class="tag">Cisco IOS</span>
+                    <span class="tag">VLAN & 802.1Q</span>
+                    <span class="tag">OSPF / RIP</span>
+                    <span class="tag">VPN (IPsec/OpenVPN)</span>
+                    <span class="tag">FLSM / VLSM</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Cybersécurité & Supervision</h3>
+                <p>Protection périmétrique, analyse de trames, filtrage réseau et stratégie de sécurisation des accès.</p>
+                <div class="tags">
+                    <span class="tag">Pare-feu (Fortinet/pfSense)</span>
+                    <span class="tag">Wireshark</span>
+                    <span class="tag">Nmap</span>
+                    <span class="tag">Gestion des droits</span>
+                    <span class="tag">Sauvegardes 3-2-1</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Scripting & Développement</h3>
+                <p>Automatisation de tâches d'administration système et intégration web responsive.</p>
+                <div class="tags">
+                    <span class="tag">Bash</span>
+                    <span class="tag">PowerShell</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">HTML / CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Axel REBUS — BTS SIO SISR</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Axel REBUS — Portfolio BTS SIO SISR",
+  "description": "Portfolio d'Axel REBUS, étudiant en BTS SIO SISR (Solutions d'Infrastructures, Systèmes et Réseaux) : parcours, compétences, projets et CV.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
